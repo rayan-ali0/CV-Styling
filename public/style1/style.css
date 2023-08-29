@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 #wrapper {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +15,7 @@ header {
 }
 
 header div {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -28,13 +32,14 @@ header div {
     grid-template-columns: 50% 50%;
 
 }
-hgroup{
+
+hgroup {
     color: red;
 }
 
 .contact {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 20% 82%;
 }
 
 #contact {
@@ -62,19 +67,16 @@ hgroup{
 }
 
 .contact dt {
-    flex: 1;
     background-color: red;
-    color: white ;
+    color: white;
     width: 300px;
 
 }
 
 .contact dd {
-    flex: 2;
     background-color: black;
     color: red;
     margin-left: 0px;
-    width: 90%;
     padding-right: 300px;
 
 }
@@ -185,8 +187,7 @@ section h3::before {
     header div {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-content: flex-start;
+        padding: 10px;
     }
 
     #contact {
@@ -198,5 +199,26 @@ section h3::before {
         display: block;
     }
 
+    .contact {
+        display: grid;
+        grid-template-columns: 33% 70%;
+    }
+
+    .contact dt {
+        flex: 1;
+        background-color: red;
+        color: white;
+        display: inline-block;
+
+    }
+
+    .contact dd {
+        flex: 2;
+        color: black;
+        background-color: white;
+        margin-left: 0px;
+
+
+    }
 
 }
