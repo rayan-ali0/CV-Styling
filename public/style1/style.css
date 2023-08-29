@@ -172,11 +172,16 @@ section h3::before {
     width: 90%;
 }
 
-.skills-secondary {
+.skills-secondary .skill{
     opacity: 0.7;
 }
 
-
+.skills-primary::before{
+    content: "Main";
+}
+.skills-secondary::before{
+    content: "Other";
+}
 @media (max-width:768px) {
     .content {
         display: grid;

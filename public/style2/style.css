@@ -1,0 +1,14 @@
+#wrapper{
+    margin: 20px;
+    border: 1px solid red;
+}
+#about h3 , hgroup h2{
+   display: none;
+}
+hgroup h1{
+    border: 1px solid grey;
+}
+ header figure{
+    float: right;
+    
+ }
