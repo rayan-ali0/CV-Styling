@@ -1,0 +1,202 @@
+#wrapper {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(172, 168, 168);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "name contact";
+}
+
+header div {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.content {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 17px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+hgroup{
+    color: red;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact {
+    position: absolute;
+    right: 10px;
+    top: 19px;
+
+}
+
+#contact h3 {
+    display: none;
+}
+
+.contacts {
+    margin-top: auto;
+    margin-right: 100;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contacts dl {
+    padding: 0;
+    margin: 0;
+}
+
+.contact dt {
+    flex: 1;
+    background-color: red;
+    color: white ;
+    width: 300px;
+
+}
+
+.contact dd {
+    flex: 2;
+    background-color: black;
+    color: red;
+    margin-left: 0px;
+    width: 90%;
+    padding-right: 300px;
+
+}
+
+.contact dd a {
+    text-decoration: none !important;
+    color: red;
+}
+
+
+.experience h4,
+.experience-date-separator {
+    color: red;
+}
+
+.experience-type {
+    font-weight: bolder;
+}
+
+.experience-institution {
+    font-weight: lighter;
+}
+
+.experience-institution::before {
+    content: "@";
+    color: red;
+}
+
+.experience-details {
+    color: rgb(175, 169, 169);
+    margin-left: 10px;
+    margin-top: -10px;
+
+}
+
+.experience-details::before {
+    content: "In ";
+}
+
+section h3 {
+    border-bottom: 1px solid rgb(202, 197, 197);
+    width: auto;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+section h3::before {
+    content: '\2022';
+    color: red;
+    font-size: 60px;
+    height: 50%;
+    vertical-align: middle;
+
+
+}
+
+.experience-description,
+#about p {
+
+    margin-right: 10px;
+}
+
+.skill {
+    background-color: rgb(199, 194, 194);
+    margin: 7px;
+}
+
+.skill span {
+    color: white;
+    background-color: red;
+    margin: 4px;
+    padding-left: 3px;
+    display: inline-block;
+}
+
+.skill[data-skill="1"] span {
+    width: 10%;
+}
+
+.skill[data-skill="3"] span {
+    width: 30%;
+}
+
+.skill[data-skill="5"] span {
+    width: 50%;
+}
+
+.skill[data-skill="7"] span {
+    width: 70%;
+}
+
+.skill[data-skill="9"] span {
+    width: 90%;
+}
+
+.skills-secondary {
+    opacity: 0.7;
+}
+
+
+@media (max-width:768px) {
+    .content {
+        display: grid;
+        grid-template-columns: 100%;
+
+    }
+
+    header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    #contact {
+        position: inherit;
+
+    }
+
+    #contact h3 {
+        display: block;
+    }
+
+
+}
