@@ -1,14 +1,205 @@
 #wrapper{
-    margin: 20px;
-    border: 1px solid red;
+    margin:30px 70px 30px 70px ;  
 }
+
+ header figure{
+ position: absolute;
+left: 80%;
+ top:0px;
+ transform: rotate(-20deg);
+ }
+#about{
+    display: block;
+    width: 80%;
+    margin-bottom: 3%;
+    color :#b1adad;
+}
+
 #about h3 , hgroup h2{
    display: none;
 }
 hgroup h1{
-    border: 1px solid grey;
+    border-bottom: 2px solid #c5c1c1;
+    padding-bottom: 20px;
+    font-weight: bold;
 }
- header figure{
+
+.content{
+     display: flex;
+     flex-direction: column;
+     row-gap: 30px;
+}
+
+section h3{
+    grid-area: a;
+    border-right: 2px solid #c5c1c1;
+    margin-right: 20px;
+}
+section{
+    display: grid;
+    grid-template-columns: 10% auto;
+grid-template-areas: 'a b'
+'a c';   
+}
+section:nth-child(2){
+grid-area: b;
+}
+section:nth-child(3){
+grid-area: c;
+
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    row-gap: 30px;
+    margin: 10px;
+}
+.skill {
+    background-color: rgb(0 128 128);
+    color: white;
+    width: 190px;
+    padding: 10px;
+}
+
+
+.skill[data-skill="1"] span::after {
+    content: "\2605 ";
     float: right;
+}
+
+.skill[data-skill="3"] span::after {
+    content: "\2605 \2605 \2605";
+    float: right;
+}
+
+.skill[data-skill="5"]  span::after  {
+    content: "\2605 \2605 \2605 \2605 \2605";
+    float: right;
+    transform: scale(0.9);
+}
+
+.skill[data-skill="7"] span::after  {
+    content: "\2605  \2605 \2605 \2605 \2605 \2605 \2605";
+    float: right;
+    transform: scale(0.8);
+}
+
+.skill[data-skill="9"] span::after  {
+    content: "\2605 \2605  \2605  \2605 \2605 \2605 \2605 \2605 \2605";
+    float: right;
+    right: 0;
+    transform: scale(0.6);
+}
+
+.experience-institution{
+    display: none;
+}
+.experience{
+    display: grid;
+    grid-template-areas: 'a b'
+    'c c';
+
+    align-items: center;
+}
+.experience-type{
+    color: rgb(0 128 128) ;
+    grid-area: a;
+    width: 20%;
     
+}
+.experience-details{
+    grid-area: b;
+color :#b1adad;
+justify-self: end;
+}
+.experience-description{
+grid-area: c;
+}
+#contact h3{
+    opacity: 0;
+}
+.contacts{
+    display: flex;
+    flex-direction: row;
+
+}
+.contacts dl{
+    display: grid;
+    width: 110px;
+    height: 110px;
+
+    background-size: cover;
+
+}
+.contacts dt, .contacts dd{
+    opacity:0;
+    
+}
+
+.contact-skype{
+    display: none !important;
+}
+.contact-email{
+    background-image: url(../images/email.png);
+
+}
+.contact-phone{
+    background-image: url(../images/phone.png);
+
+}
+.contact-github {
+    
+    background-image: url(../images/github.png);
+
+}
+.contact dd a{
+    width: 110px;
+    height: 110px;
+    display: block;
+    border: 1px solid red;
+} 
+.contact-facebook{
+    background-image: url(../images/facebook.png);
+}
+@media (max-width:768px) {
+    header figure{
+        display: none;
+    }
+    section{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'a'
+        'b'
+        'c';
+        
+    }
+    section h3{
+        border-bottom:2px solid black ;
+        border-right: none;
+        display:inline;
+        width: 40%;
+        }
+    section:nth-child(2){
+        grid-area: b;
+        }
+        section:nth-child(3){
+        grid-area: c;
+        
+        }
+        .contacts dl{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        scale: 0.7;
+        }
+ #about{
+    width: 100%;
  }
+ .skills{
+    scale: (0.5);
+ }
+ .experience{
+    font-size: x-small;
+ }
+}
