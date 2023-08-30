@@ -211,10 +211,8 @@ section h3::before {
 
     .contact dt {
         flex: 1;
-        background-color: red;
         color: white;
         display: inline-block;
-
     }
 
     .contact dd {
@@ -222,8 +220,11 @@ section h3::before {
         color: black;
         background-color: white;
         margin-left: 0px;
+        padding-right: 100px;
 
-
+    }
+    .contact dd a{
+        text-decoration: none;
     }
 
 }
